@@ -1,0 +1,11 @@
+puts "What is the length of your box?"
+length = gets.chomp.to_i
+
+puts "What is the width of your box?"
+width = gets.chomp.to_i
+
+area = length * width
+perimeter = (2 * length) + (2 * width)
+puts "The area of your garden is #{area}, and the perimeter is #{perimeter}."
+
+puts "You can grow #{(area * 16) / 16} carrots, #{(area * 3) / 16} corn stalks, or #{(area * 9) / 16} beets in your space."
