@@ -1,0 +1,28 @@
+using System;
+
+namespace Practice
+{
+    class MainClass
+    {
+        
+    public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number.");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter a second number, and we'll multiply them together.");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine(TimesTogether(x, y));
+            Console.WriteLine("Tada. #computers. Now go outside and play.");
+            Console.ReadLine();
+        }
+
+        static int TimesTogether(int x, int y)
+        {
+            return (x * y);
+        }
+    }
+    
+}
