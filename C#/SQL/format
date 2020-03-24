@@ -1,0 +1,37 @@
+using System;
+using Mono.Data.Sqlite;
+
+namespace Session10DB
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //goal: print out all names from address book
+            //connection to dbase
+            SqliteConnection connection = new SqliteConnection(@"Data Source=/Users/jaysnowe/databases/database1.sqlite;");
+            connection.Open();
+            
+            //command we are running (request)
+            SqliteCommand command = new SqliteCommand("SELECT * FROM AddressBook", connection);
+            
+            //reader of response(response)
+            SqliteDataReader reader = command.ExecuteReader();
+            
+            //get rows out of reader
+            while (reader.Read())
+            {
+                Console.Write(reader["FirstName"]);
+                Console.Write(" - ");
+                Console.WriteLine(reader["PetNum"]);
+                //OR
+                Console.WriteLine(reader["FirstName"] + " - " + reader["LastName"]);
+            }
+
+            connection.Close();
+
+            Console.WriteLine("yay!");
+
+        }
+    }
+}
