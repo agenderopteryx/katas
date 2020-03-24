@@ -1,0 +1,25 @@
+//means we can use classes from the System namespace
+//namespaces are a place for the application to live. Gives context for variables & lets me make classes like 'Console.'
+using System;
+
+//container for other namespaces & classes
+namespace Practice
+{
+    //class=>container for data and methods. Brings the functionality
+    class MainClass
+    {
+    //public - compiler can execute code in this method from anywhere
+    //static - Main method can be called w/out an object
+    //void - Main method doesn't return anything
+    //Main - the method() that will do the things
+    //(string[] args) - the method argument(s). This one leaves the input open-ended and enables command line arguments
+    public static void Main(string[] args)
+        {
+            //Console. is a class
+            Console.WriteLine("Hello world");
+        }
+
+        
+    }
+    
+}
