@@ -1,0 +1,30 @@
+using System;
+using Mono.Data.Sqlite;
+
+namespace Practice
+{
+    class MainClass
+    {
+
+        public static void Welcome()
+        {
+            Console.WriteLine("Welcome Friends!");
+        }
+
+        public static void HaveANice()
+        {
+            Console.WriteLine("Have a nice day!");
+        }
+
+        public static void Main(string[] args)
+        {
+            Console.Write("\n\nSee, this is how to create a user defined function :\n");
+            Console.Write("---------------------------\n");
+            Welcome();
+            HaveANice();
+            Console.Write("\n");
+        }
+
+        
+    }
+}
